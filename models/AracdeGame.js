@@ -7,8 +7,8 @@ const ResourceSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  content: {
-    type: String,
+  rating: {
+    type: int,
     required: false
   }
 }, {
