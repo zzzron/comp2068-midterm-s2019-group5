@@ -25,4 +25,4 @@ const ArcadeGameSchema = new mongoose.Schema({
 });
 
 // Exporting our resource model
-module.exports = mongoose.model('Resource', ArcadeGameSchema);
+module.exports = mongoose.model('ArcadeGame', ArcadeGameSchema);

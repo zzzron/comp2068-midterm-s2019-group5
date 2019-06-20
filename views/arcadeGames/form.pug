@@ -7,9 +7,19 @@ form(action=(arcadeGame ? `/arcadeGames/update` : "/arcadeGames"), method="POST"
     input.form-control(name="arcadeGame[title]", required, value=(arcadeGame ? arcadeGame.title : null))
 
   .form-group
-    label Content
-    textarea.form-control(name="arcadeGame[content]")
-      = arcadeGame ? arcadeGame.content : null
+    label Rating
+    textarea.form-control(name="arcadeGame[rating]", required, value=(arcadeGame ? arcadeGame.rating : null))
+      
+  
+  .form-group
+    label Description
+    textarea.form-control(name="arcadeGame[description]", required, value=(arcadeGame ? arcadeGame.description : null))
+      
+
+  .form-group
+    label Genre
+    textarea.form-control(name="arcadeGame[genre]", required, value=(arcadeGame ? arcadeGame.genre : null))
+      
   
   .form-group
     button.btn.btn-dark(type="submit") Submit
