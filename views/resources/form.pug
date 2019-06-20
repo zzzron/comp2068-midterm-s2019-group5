@@ -1,0 +1,15 @@
+form(action=(resource ? `/resources/update` : "/resources"), method="POST")
+  if resource
+    input(type="hidden", name="id", value=resource.id)
+
+  .form-group
+    label Title
+    input.form-control(name="resource[title]", required, value=(resource ? resource.title : null))
+
+  .form-group
+    label Content
+    textarea.form-control(name="resource[content]")
+      = resource ? resource.content : null
+  
+  .form-group
+    button.btn.btn-dark(type="submit") Submit
