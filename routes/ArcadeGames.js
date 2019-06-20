@@ -2,7 +2,7 @@
 const router = require('express').Router();
 
 // Our controller
-const ResourcesController = require('../controllers/resourcesController');
+const ResourcesController = require('../controllers/ArcadeGamesController');
 
 // Our routes
 
