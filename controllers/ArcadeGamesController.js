@@ -1,7 +1,20 @@
-const Resource = require('../models/ArcadeGame');
+const ArcadeGame = require('../models/ArcadeGame');
 const mongoose = require('mongoose');
 
-exports.index = (req, res) => {};
+exports.index = (req, res) => {
+    ArcadeGame.find({
+    })
+        .then(arcadeGames => {
+            res.render('arcadeGames/index', {
+                arcadeGames: arcadeGames,
+                title: 'Archive'
+            });
+        })
+        .catch(err => {
+            req.flash('error', `ERROR: ${err}`);
+            res.redirect('/');
+        });
+};
 
 
 exports.show = (req, res) => {};

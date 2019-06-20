@@ -58,7 +58,7 @@ app.use('/js', express.static('assets/javascripts'));
 app.use('/images', express.static('assets/images'));
 
 // Our routes
-const routes = require('./routes.js');
+const routes = require('./routes/ArcadeGames.js');
 app.use('/', routes);
 
 // Starting our server on port 4000
